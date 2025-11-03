@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', 'Inter', system-ui, sans-serif;
+  background: #fdfcfb; /* کرم نرم */
+  color: #3f2a1f; /* متن قهوه‌ای */
+  margin: 0;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* گرادیانت و کلاس‌های ساده */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(93, 64, 55, 0.8), rgba(5, 150, 105, 0.5));
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+  transform: translateY(-10px);
+}
+
+.btn-primary {
+  background: #fbbf24; /* طلایی */
+  color: #3f2a1f;
+}
+
+.btn-primary:hover {
+  background: #fcd34d; /* طلایی روشن */
+}
+
+.hover-glow:hover {
+  color: #10b981; /* سبز یاقوتی */
+  text-shadow: 0 0 10px rgba(16, 180, 129, 0.3);
 }
