@@ -1,34 +1,50 @@
+﻿/* فونت فارسی */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
 @import "tailwindcss";
 
 body {
-  font-family: 'Playfair Display', 'Inter', system-ui, sans-serif;
-  background: #fdfcfb; /* کرم نرم */
-  color: #3f2a1f; /* متن قهوه‌ای */
+  font-family: 'Vazirmatn', 'Inter', system-ui, sans-serif;
+  background: #fdfcfb;
+  color: #3f2a1f;
   margin: 0;
   line-height: 1.7;
   scroll-behavior: smooth;
 }
 
-/* گرادیانت و کلاس‌های ساده */
-.hero-overlay {
-  background: linear-gradient(to bottom, rgba(93, 64, 55, 0.8), rgba(5, 150, 105, 0.5));
+/* کلاس برای فونت انگلیسی */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
 }
 
-.card:hover {
-  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
-  transform: translateY(-10px);
+/* انیمیشنهای جدید */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.btn-primary {
-  background: #fbbf24; /* طلایی */
-  color: #3f2a1f;
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
 }
 
-.btn-primary:hover {
-  background: #fcd34d; /* طلایی روشن */
+/* هورور effects */
+.hover-lift {
+  transition: transform 0.3s ease;
 }
 
-.hover-glow:hover {
-  color: #10b981; /* سبز یاقوتی */
-  text-shadow: 0 0 10px rgba(16, 180, 129, 0.3);
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Glass morphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
